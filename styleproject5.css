@@ -1,0 +1,122 @@
+body {
+  background-color: #3c5419;
+  border: 100px;
+}
+h1 {
+  color: rgb(34, 0, 145);
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: center;
+  background-color: #0fca15;
+  border-radius: 30px;
+  width: 38%;
+  margin: auto;
+  margin-bottom: 20px;
+  box-shadow: 10px 10px 90px #3c13ac;
+}
+legend {
+  border: 100px;
+  padding: 20px;
+  border-radius: 40px;
+  color: rgb(34, 0, 145);
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: left;
+  background-color: #6a9d1d;
+  border: #0fca15 solid 5px;
+}
+fieldset {
+  border: 100px;
+  padding: 20px;
+  border-radius: 40px;
+  color: rgb(34, 0, 145);
+  font-family: sans-serif;
+  font-weight: 700;
+  text-align: left;
+  background-color: #1594c6;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 35%;
+  box-shadow: 10px 10px 90px #3c13ac;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+input[type="file"],
+input[type="tel"],
+select {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: aqua;
+  border-radius: 20px;
+}
+input[required] {
+  border: #e61010 solid 5px;
+}
+input[optional] {
+  border: 5px solid #0fca15;
+}
+.First_name {
+  color: #1b0fca;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  background-color: green;
+  border-radius: 20px;
+  padding: 5px;
+  display: none;
+}
+input:focus + .First_name {
+  display: block;
+}
+td {
+  padding: 5px;
+}
+.sur_name {
+  color: #1b0fca;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  background-color: green;
+  border-radius: 20px;
+  padding: 5px;
+  display: none;
+}
+input[optional]:focus + .sur_name {
+  display: block;
+}
+.mobile_number {
+  color: #1b0fca;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  background-color: green;
+  border-radius: 20px;
+  padding: 5px;
+  display: none;
+}
+input[required]:focus + .mobile_number {
+  display: block;
+}
+.Correct,
+.Wrong {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+input[type="email"]:valid:focus ~ .Correct {
+  display: inline;
+}
+input[type="email"]:invalid:focus ~ .Wrong {
+  display: inline;
+}
+.Password {
+  color: #1b0fca;
+  font-family: "Times New Roman", Times, serif;
+  text-align: left;
+  background-color: green;
+  border-radius: 20px;
+  padding: 5px;
+  display: none;
+}
+input[type="password"]:focus + .Password {
+  display: block;
+}

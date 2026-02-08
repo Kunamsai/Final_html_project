@@ -1,105 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>FORMS</title>
+    <link rel="stylesheet" href="styleproject5.css">
   </head>
   <body>
-    <h1>Google Form</h1>
-    <fieldset>
-      <legend>Personal Information</legend>
-      <form>
-      <label for="fname">Firstname:</label>
-      <input type="text" id="fname" name="fname" required /><br /><br />
-
-      <label for="sname">Surname:</label>
-      <input type="text" id="sname" name="sname" required /><br /><br />
-
-      <label for="mnumber">Mobile number:</label>
-      <input type="tel" id="mnumber" name="mnumber" required /><br /><br />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required /><br /><br />
-
-      <label for="password">Password:</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        required
-      /><br /><br />
-
-      <label for="cpassword">Confirm Password</label>
-      <input
-        type="password"
-        id="cpassword"
-        name="cpassword"
-        required
-      /><br /><br />
-
-      <label for="gender">Gender:</label>
-      <input type="radio" id="male" name="gender" value="male" />
-      <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female" />
-      <label for="female">Female</label>
-      <input type="radio" id="other" name="gender" value="other" />
-      <label for="other">Other</label><br /><br />
-
-      <label for="country">Select Country:</label>
-      <select id="country" name="country">
-        <option value="usa">USA</option>
-        <option value="canada">Canada</option>
-        <option value="uk">UK</option>
-        <option value="australia">Australia</option>
-        <option value="india">India</option></select
-      ><br /><br />
-
-      <label for="file">Upload your file:</label>
-      <input type="file" id="file" name="file" /><br /><br />
-
-      <input type="reset" value="Reset" />
-
+    <h1>Course Registration Form</h1>
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+          <tr>
+            <td><label for="fn">First Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="fn"
+                name="FN"
+                placeholder="Ex: Sai"
+                size="15"
+                maxlength="10"
+                required
+              />
+              <p class="First_name">Enter your first name</p><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="ln">Surname</label></td>
+            <td>
+              <input
+                type="text"
+                id="ln"
+                name="LN"
+                placeholder="Ex: T"
+                size="15"
+                optional
+              />
+              <P class="sur_name">Enter your intial</P><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mob">Mobile Number</label></td>
+            <td>
+              <input
+                type="tel"
+                id="mob"
+                name="mob"
+                placeholder="Ex: 987-897-0987"
+                size="15"
+                pattern="[0-9]{10}"
+                title="Enter 10 digit mobile number"
+                required
+              />
+              <p class="mobile_number">Enter your mobile number</p><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mail">Email</label></td>
+            <td>
+              <input
+                type="email"
+                id="mail"
+                name="mail"
+                size="15"
+                placeholder="Ex: rohit@gmail.com"
+                required
+              />
+              <img class="Correct" src="https://static.vecteezy.com/system/resources/previews/026/381/113/original/green-check-mark-icon-correct-answer-or-complete-done-vector.jpg" alt="Correct">
+              <img class="Wrong" src="https://static.vecteezy.com/system/resources/previews/022/377/766/original/cross-check-mark-icon-button-and-no-or-wrong-symbol-on-reject-cancel-sign-button-rendering-3d-free-png.png" alt="Wrong"><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pwd">Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="pwd"
+                name="pwd"
+                placeholder="min 5 characters"
+                size="15"
+                minlength="5"
+                maxlength="20"
+                required
+              />
+              <p class="Password">Enter valid password</p><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="cpwd">Confirm Password</label></td>
+            <td>
+              <input
+                type="password"
+                id="cpwd"
+                name="cpwd"
+                placeholder="min 5 characters"
+                size="15"
+                minlength="5"
+                required
+              />
+              <p class="Password">Reenter the password again</p><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">DOB</label></td>
+            <td>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                min="1950-01-01"
+                max="2010-12-31"
+                optional
+              /><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Gender</label></td>
+            <td>
+              <input type="radio" id="male" name="gender" value="M" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="F" />
+              <label for="female">Female</label>
+              <input type="radio" id="custom" name="gender" value="C" />
+              <label for="custom">Custom</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="country">Select Country</label></td>
+            <td>
+              <select id="country" name="Country">
+                <option value="" disabled selected >-- Select --</option>
+                <option value="INDIA">INDIA</option>
+                <option value="USA">USA</option>
+                <option value="China">China</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+                </select
+              ><br />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pic">Upload Picture</label></td>
+            <td>
+              <input type="file" id="pic" name="pic" accept="image/*" 
+              optional />
+              <br />
+            </td>
+          </tr>
+        </table>
       </fieldset>
-      <fieldset>  
-        <legend>Course Information</legend>
-      <label for="course">Choose a course:</label>
-      <select id="course" name="course">
-        <option value="webdev">Web Development</option>
-        <option value="datasci">Data Science</option>
-        <option value="cybersec">Cyber Security</option>
-        <option value="aidev">AI Development</option></select
-      ><br /><br />
 
-      <label for="dmode">Delivery mode</label>
-      <input type="radio" id="online" name="dmode" value="online" />
-      <label for="online">Online</label>
-      <input type="radio" id="offline" name="dmode" value="offline" />
-      <label for="offline">Offline</label><br /><br />
+      <br />
 
-      <label for="iname">INSTITUTE NAME:</label>
-      <input
-        type="text"
-        id="iname"
-        name="iname"
-        value="TAP ACADEMY"
-      /><br /><br />
+      <fieldset>
+        <legend>Course Details</legend>
+        <table>
+          <tr>
+            <td><label for="course">Select Course</label></td>
+            <td>
+              <select id="course" name="Course">
+                <option value="" disabled selected>-- Select Course --</option>
+                <option value="PFS">Python Full Stack</option>
+                <option value="JFS">Java Full Stack</option>
+                <option value="CJ">MERN STACK</option>
+                <option value="PDS">Python for DataScience</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Delivery Mode</label></td>
+            <td>
+              <input type="checkbox" id="online" name="mode" value="ON" />
+              <label for="online">ONLINE</label>
+              <input type="checkbox" id="offline" name="mode" value="OFF" />
+              <label for="offline">OFFLINE</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="comments">Comments</label></td>
+            <td>
+              <textarea
+                id="comments"
+                name="comments"
+                rows="4"
+                cols="40"
+                placeholder="Enter any additional comments..."
+                maxlength="500"
+              ></textarea>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
 
-      <label for="level">Coding knowledge level:</label>
-      <input
-        type="range"
-        id="level"
-        name="level"
-        min="1"
-        max="10"
-      /><br /><br />
-
-      <label for="comments">Additional Comments:</label><br />
-      <textarea id="comments" name="comments" rows="4" cols="50"></textarea
-      ><br /><br />
-      <input type="submit" value="Submit" />
-
-
-      </form>
+      <br />
   </body>
 </html>
